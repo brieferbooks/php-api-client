@@ -27,7 +27,7 @@ class ListItems extends Request {
      */
     protected $offset;
     /**
-     * @var bool $return_properties With `returnProperties=true`, property values of the listed items are returned along with their IDs in a JSON dictionary. 
+     * @var bool $return_properties With `returnProperties=true`, property values of the listed items are returned along with their IDs in a JSON dictionary.
      * Example response:
      * ```
      *   [
@@ -50,7 +50,7 @@ class ListItems extends Request {
      */
     protected $return_properties;
     /**
-     * @var array $included_properties Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list. 
+     * @var array $included_properties Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list.
      * Example response for `includedProperties=description,price`:
      * ```
      *   [
@@ -88,7 +88,7 @@ class ListItems extends Request {
      *         - Description: Specifies the number of items to skip (ordered by `itemId`).
      *     - *returnProperties*
      *         - Type: bool
-     *         - Description: With `returnProperties=true`, property values of the listed items are returned along with their IDs in a JSON dictionary. 
+     *         - Description: With `returnProperties=true`, property values of the listed items are returned along with their IDs in a JSON dictionary.
      * Example response:
      * ```
      *   [
@@ -110,7 +110,7 @@ class ListItems extends Request {
      * ```
      *     - *includedProperties*
      *         - Type: array
-     *         - Description: Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list. 
+     *         - Description: Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list.
      * Example response for `includedProperties=description,price`:
      * ```
      *   [
@@ -141,7 +141,7 @@ class ListItems extends Request {
             if (!in_array($key, $existing_optional))
                  throw new UnknownOptionalParameterException($key);
          }
-        $this->timeout = 100000;
+        $this->timeout = 10000;
         $this->ensure_https = false;
     }
 

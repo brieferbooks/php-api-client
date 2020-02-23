@@ -27,7 +27,7 @@ class AddItemProperty extends Request {
      * * `timestamp` - Value representing date and time.
      * * `set` - Set of strings.
      * * `image` - URL of an image (`jpeg`, `png` or `gif`).
-     * * `imageList` - List of URLs that refer to images. 
+     * * `imageList` - List of URLs that refer to images.
      */
     protected $type;
 
@@ -42,12 +42,12 @@ class AddItemProperty extends Request {
      * * `timestamp` - Value representing date and time.
      * * `set` - Set of strings.
      * * `image` - URL of an image (`jpeg`, `png` or `gif`).
-     * * `imageList` - List of URLs that refer to images. 
+     * * `imageList` - List of URLs that refer to images.
      */
     public function __construct($property_name, $type) {
         $this->property_name = $property_name;
         $this->type = $type;
-        $this->timeout = 100000;
+        $this->timeout = 10000;
         $this->ensure_https = false;
     }
 

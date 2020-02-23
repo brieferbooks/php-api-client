@@ -35,7 +35,7 @@ class RecommendUsersToItem extends Request {
      */
     protected $cascade_create;
     /**
-     * @var bool $return_properties With `returnProperties=true`, property values of the recommended users are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying the recommended users. 
+     * @var bool $return_properties With `returnProperties=true`, property values of the recommended users are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying the recommended users.
      * Example response:
      * ```
      *   {
@@ -62,7 +62,7 @@ class RecommendUsersToItem extends Request {
      */
     protected $return_properties;
     /**
-     * @var array $included_properties Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list. 
+     * @var array $included_properties Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list.
      * Example response for `includedProperties=country`:
      * ```
      *   {
@@ -136,7 +136,7 @@ class RecommendUsersToItem extends Request {
      *         - Description: If item of given *itemId* doesn't exist in the database, it creates the missing item.
      *     - *returnProperties*
      *         - Type: bool
-     *         - Description: With `returnProperties=true`, property values of the recommended users are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying the recommended users. 
+     *         - Description: With `returnProperties=true`, property values of the recommended users are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying the recommended users.
      * Example response:
      * ```
      *   {
@@ -162,7 +162,7 @@ class RecommendUsersToItem extends Request {
      * ```
      *     - *includedProperties*
      *         - Type: array
-     *         - Description: Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list. 
+     *         - Description: Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list.
      * Example response for `includedProperties=country`:
      * ```
      *   {
@@ -202,7 +202,7 @@ class RecommendUsersToItem extends Request {
      *         - Type: float
      *         - Description: **Expert option** Real number from [0.0, 1.0] which determines how much mutually dissimilar should the recommended items be. The default value is 0.0, i.e., no diversification. Value 1.0 means maximal diversification.
      *     - *expertSettings*
-     *         - Type: 
+     *         - Type:
      *         - Description: Dictionary of custom options.
      *     - *returnAbGroup*
      *         - Type: bool
@@ -229,7 +229,7 @@ class RecommendUsersToItem extends Request {
             if (!in_array($key, $existing_optional))
                  throw new UnknownOptionalParameterException($key);
          }
-        $this->timeout = 50000;
+        $this->timeout = 10000;
         $this->ensure_https = false;
     }
 

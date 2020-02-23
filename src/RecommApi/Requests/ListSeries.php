@@ -19,7 +19,7 @@ class ListSeries extends Request {
      * Construct the request
      */
     public function __construct() {
-        $this->timeout = 100000;
+        $this->timeout = 10000;
         $this->ensure_https = false;
     }
 

@@ -12,7 +12,7 @@ use Recombee\RecommApi\Exceptions\UnknownOptionalParameterException;
 /**
  * Full-text personalized search. The results are based on the provided `searchQuery` and also on the user's past interactions (purchases, ratings, etc.) with the items (items more suitable for the user are preferred in the results).
  * All the string and set item properties are indexed by the search engine.
- * This endpoint should be used in a search box at your website/app. It can be called multiple times as the user is typing the query in order to get the most viable suggestions based on current state of the query, or once after submitting the whole query. 
+ * This endpoint should be used in a search box at your website/app. It can be called multiple times as the user is typing the query in order to get the most viable suggestions based on current state of the query, or once after submitting the whole query.
  * It is also possible to use POST HTTP method (for example in case of very long ReQL filter) - query parameters then become body parameters.
  * The returned items are sorted by relevancy (first item being the most relevant).
  */
@@ -41,12 +41,12 @@ class SearchItems extends Request {
      */
     protected $cascade_create;
     /**
-     * @var bool $return_properties With `returnProperties=true`, property values of the recommended items are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying of the recommended items to the user. 
+     * @var bool $return_properties With `returnProperties=true`, property values of the recommended items are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying of the recommended items to the user.
      * Example response:
      * ```
      *   {
      *     "recommId": "ce52ada4-e4d9-4885-943c-407db2dee837",
-     *     "recomms": 
+     *     "recomms":
      *       [
      *         {
      *           "id": "tv-178",
@@ -72,7 +72,7 @@ class SearchItems extends Request {
      */
     protected $return_properties;
     /**
-     * @var array $included_properties Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list. 
+     * @var array $included_properties Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list.
      * Example response for `includedProperties=description,price`:
      * ```
      *   {
@@ -145,12 +145,12 @@ class SearchItems extends Request {
      *         - Description: If the user does not exist in the database, returns a list of non-personalized search results and creates the user in the database. This allows for example rotations in the following recommendations for that user, as the user will be already known to the system.
      *     - *returnProperties*
      *         - Type: bool
-     *         - Description: With `returnProperties=true`, property values of the recommended items are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying of the recommended items to the user. 
+     *         - Description: With `returnProperties=true`, property values of the recommended items are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying of the recommended items to the user.
      * Example response:
      * ```
      *   {
      *     "recommId": "ce52ada4-e4d9-4885-943c-407db2dee837",
-     *     "recomms": 
+     *     "recomms":
      *       [
      *         {
      *           "id": "tv-178",
@@ -175,7 +175,7 @@ class SearchItems extends Request {
      * ```
      *     - *includedProperties*
      *         - Type: array
-     *         - Description: Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list. 
+     *         - Description: Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list.
      * Example response for `includedProperties=description,price`:
      * ```
      *   {
@@ -214,7 +214,7 @@ class SearchItems extends Request {
      * The difference between `logic` and `scenario` is that `logic` specifies mainly behavior, while `scenario` specifies the place where recommendations are shown to the users.
      * Logic can be also set to a [scenario](https://docs.recombee.com/scenarios.html) in the [Admin UI](https://admin.recombee.com).
      *     - *expertSettings*
-     *         - Type: 
+     *         - Type:
      *         - Description: Dictionary of custom options.
      *     - *returnAbGroup*
      *         - Type: bool
@@ -241,7 +241,7 @@ class SearchItems extends Request {
             if (!in_array($key, $existing_optional))
                  throw new UnknownOptionalParameterException($key);
          }
-        $this->timeout = 3000;
+        $this->timeout = 10000;
         $this->ensure_https = false;
     }
 

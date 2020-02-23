@@ -51,7 +51,7 @@ class RecommendItemsToItem extends Request {
      */
     protected $cascade_create;
     /**
-     * @var bool $return_properties With `returnProperties=true`, property values of the recommended items are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying of the recommended items to the user. 
+     * @var bool $return_properties With `returnProperties=true`, property values of the recommended items are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying of the recommended items to the user.
      * Example response:
      * ```
      *   {
@@ -82,12 +82,12 @@ class RecommendItemsToItem extends Request {
      */
     protected $return_properties;
     /**
-     * @var array $included_properties Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list. 
+     * @var array $included_properties Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list.
      * Example response for `includedProperties=description,price`:
      * ```
      *   {
      *     "recommId": "6842c725-a79f-4537-a02c-f34d668a3f80",
-     *     "recomms": 
+     *     "recomms":
      *       [
      *         {
      *           "id": "tv-178",
@@ -187,7 +187,7 @@ class RecommendItemsToItem extends Request {
      *         - Description: If item of given *itemId* or user of given *targetUserId* doesn't exist in the database, it creates the missing entity/entities and returns some (non-personalized) recommendations. This allows for example rotations in the following recommendations for the user of given *targetUserId*, as the user will be already known to the system.
      *     - *returnProperties*
      *         - Type: bool
-     *         - Description: With `returnProperties=true`, property values of the recommended items are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying of the recommended items to the user. 
+     *         - Description: With `returnProperties=true`, property values of the recommended items are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying of the recommended items to the user.
      * Example response:
      * ```
      *   {
@@ -217,12 +217,12 @@ class RecommendItemsToItem extends Request {
      * ```
      *     - *includedProperties*
      *         - Type: array
-     *         - Description: Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list. 
+     *         - Description: Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list.
      * Example response for `includedProperties=description,price`:
      * ```
      *   {
      *     "recommId": "6842c725-a79f-4537-a02c-f34d668a3f80",
-     *     "recomms": 
+     *     "recomms":
      *       [
      *         {
      *           "id": "tv-178",
@@ -271,7 +271,7 @@ class RecommendItemsToItem extends Request {
      *         - Type: float
      *         - Description: **Expert option** If the *targetUserId* is provided: Taking *rotationRate* into account, specifies how long time it takes to an item to recover from the penalization. For example, `rotationTime=7200.0` means that items recommended less than 2 hours ago are penalized.
      *     - *expertSettings*
-     *         - Type: 
+     *         - Type:
      *         - Description: Dictionary of custom options.
      *     - *returnAbGroup*
      *         - Type: bool
@@ -303,7 +303,7 @@ class RecommendItemsToItem extends Request {
             if (!in_array($key, $existing_optional))
                  throw new UnknownOptionalParameterException($key);
          }
-        $this->timeout = 3000;
+        $this->timeout = 10000;
         $this->ensure_https = false;
     }
 

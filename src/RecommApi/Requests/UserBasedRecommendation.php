@@ -45,7 +45,7 @@ class UserBasedRecommendation extends Request {
      */
     protected $scenario;
     /**
-     * @var bool $return_properties With `returnProperties=true`, property values of the recommended items are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying of the recommended items to the user. 
+     * @var bool $return_properties With `returnProperties=true`, property values of the recommended items are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying of the recommended items to the user.
      * Example response:
      * ```
      *   [
@@ -68,7 +68,7 @@ class UserBasedRecommendation extends Request {
      */
     protected $return_properties;
     /**
-     * @var array $included_properties Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list. 
+     * @var array $included_properties Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list.
      * Example response for `includedProperties=description,price`:
      * ```
      *   [
@@ -134,7 +134,7 @@ class UserBasedRecommendation extends Request {
      *         - Description: Scenario defines a particular application of recommendations. It can be for example "homepage", "cart" or "emailing". You can see each scenario in the UI separately, so you can check how well each application performs. The AI which optimizes models in order to get the best results may optimize different scenarios separately, or even use different models in each of the scenarios.
      *     - *returnProperties*
      *         - Type: bool
-     *         - Description: With `returnProperties=true`, property values of the recommended items are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying of the recommended items to the user. 
+     *         - Description: With `returnProperties=true`, property values of the recommended items are returned along with their IDs in a JSON dictionary. The acquired property values can be used for easy displaying of the recommended items to the user.
      * Example response:
      * ```
      *   [
@@ -156,7 +156,7 @@ class UserBasedRecommendation extends Request {
      * ```
      *     - *includedProperties*
      *         - Type: array
-     *         - Description: Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list. 
+     *         - Description: Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list.
      * Example response for `includedProperties=description,price`:
      * ```
      *   [
@@ -185,7 +185,7 @@ class UserBasedRecommendation extends Request {
      *         - Type: float
      *         - Description: **Expert option** Taking *rotationRate* into account, specifies how long time it takes to an item to recover from the penalization. For example, `rotationTime=7200.0` means that items recommended less than 2 hours ago are penalized. Default: `7200.0`.
      *     - *expertSettings*
-     *         - Type: 
+     *         - Type:
      *         - Description: Dictionary of custom options.
      * @throws Exceptions\UnknownOptionalParameterException UnknownOptionalParameterException if an unknown optional parameter is given in $optional
      */
@@ -211,7 +211,7 @@ class UserBasedRecommendation extends Request {
             if (!in_array($key, $existing_optional))
                  throw new UnknownOptionalParameterException($key);
          }
-        $this->timeout = 3000;
+        $this->timeout = 10000;
         $this->ensure_https = false;
     }
 

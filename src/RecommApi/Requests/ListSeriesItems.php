@@ -25,7 +25,7 @@ class ListSeriesItems extends Request {
      */
     public function __construct($series_id) {
         $this->series_id = $series_id;
-        $this->timeout = 100000;
+        $this->timeout = 10000;
         $this->ensure_https = false;
     }
 

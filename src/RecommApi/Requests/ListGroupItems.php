@@ -25,7 +25,7 @@ class ListGroupItems extends Request {
      */
     public function __construct($group_id) {
         $this->group_id = $group_id;
-        $this->timeout = 100000;
+        $this->timeout = 10000;
         $this->ensure_https = false;
     }
 

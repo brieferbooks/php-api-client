@@ -25,7 +25,7 @@ class GetUserPropertyInfo extends Request {
      */
     public function __construct($property_name) {
         $this->property_name = $property_name;
-        $this->timeout = 100000;
+        $this->timeout = 10000;
         $this->ensure_https = false;
     }
 

@@ -27,7 +27,7 @@ class ListUsers extends Request {
      */
     protected $offset;
     /**
-     * @var bool $return_properties With `returnProperties=true`, property values of the listed users are returned along with their IDs in a JSON dictionary. 
+     * @var bool $return_properties With `returnProperties=true`, property values of the listed users are returned along with their IDs in a JSON dictionary.
      * Example response:
      * ```
      *   [
@@ -46,7 +46,7 @@ class ListUsers extends Request {
      */
     protected $return_properties;
     /**
-     * @var array $included_properties Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list. 
+     * @var array $included_properties Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list.
      * Example response for `includedProperties=country`:
      * ```
      *   [
@@ -82,7 +82,7 @@ class ListUsers extends Request {
      *         - Description: Specifies the number of users to skip (ordered by `userId`).
      *     - *returnProperties*
      *         - Type: bool
-     *         - Description: With `returnProperties=true`, property values of the listed users are returned along with their IDs in a JSON dictionary. 
+     *         - Description: With `returnProperties=true`, property values of the listed users are returned along with their IDs in a JSON dictionary.
      * Example response:
      * ```
      *   [
@@ -100,7 +100,7 @@ class ListUsers extends Request {
      * ```
      *     - *includedProperties*
      *         - Type: array
-     *         - Description: Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list. 
+     *         - Description: Allows to specify, which properties should be returned when `returnProperties=true` is set. The properties are given as a comma-separated list.
      * Example response for `includedProperties=country`:
      * ```
      *   [
@@ -129,7 +129,7 @@ class ListUsers extends Request {
             if (!in_array($key, $existing_optional))
                  throw new UnknownOptionalParameterException($key);
          }
-        $this->timeout = 100000;
+        $this->timeout = 10000;
         $this->ensure_https = false;
     }
 

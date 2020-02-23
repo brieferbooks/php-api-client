@@ -72,7 +72,7 @@ class SetViewPortion extends Request {
      *         - Type: string
      *         - Description: If this view portion is based on a recommendation request, `recommId` is the id of the clicked recommendation.
      *     - *additionalData*
-     *         - Type: 
+     *         - Type:
      *         - Description: A dictionary of additional data for the interaction.
      * @throws Exceptions\UnknownOptionalParameterException UnknownOptionalParameterException if an unknown optional parameter is given in $optional
      */
@@ -92,7 +92,7 @@ class SetViewPortion extends Request {
             if (!in_array($key, $existing_optional))
                  throw new UnknownOptionalParameterException($key);
          }
-        $this->timeout = 1000;
+        $this->timeout = 10000;
         $this->ensure_https = false;
     }
 

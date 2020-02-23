@@ -305,4 +305,4 @@ class ItemBasedRecommendation extends Request {
     }
 
 }
-?>
+

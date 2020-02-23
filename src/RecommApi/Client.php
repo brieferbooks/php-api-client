@@ -15,7 +15,7 @@ use Recombee\RecommApi\Util\Util;
  * Client for easy usage of Recombee recommendation API
 */
 class Client{
-    
+
     protected $account;
     protected $token;
     protected $request;
@@ -69,7 +69,7 @@ class Client{
      * @throws Exceptions\ApiTimeoutException ApiTimeoutException if the request takes too long
      */
     public function send(Requests\Request $request) {
-        
+
         if($request instanceof Requests\Batch && count($request->requests) > Client::BATCH_MAX_SIZE)
             return $this->sendMultipartBatch($request);
 
@@ -122,7 +122,7 @@ class Client{
     }
 
     protected function getHttpHeaders() {
-        return array_merge(array('User-Agent' => $this->user_agent), $this->getOptionalHttpHeaders()); 
+        return array_merge(array('User-Agent' => $this->user_agent), $this->getOptionalHttpHeaders());
     }
 
     protected function getOptionalRequestOptions() {
@@ -229,4 +229,4 @@ class Client{
     }
 
 }
-?>
+

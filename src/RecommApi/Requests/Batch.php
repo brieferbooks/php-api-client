@@ -21,7 +21,7 @@ class Batch extends Request {
 
     /**
      * @var Request[] Requests contained in the batch
-     */ 
+     */
     public $requests;
 
     /**
@@ -116,6 +116,6 @@ class Batch extends Request {
         if($params)
             $bh['params'] = $params;
         return $bh;
-    } 
+    }
 }
-?>
+

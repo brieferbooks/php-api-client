@@ -96,4 +96,4 @@ class DeleteRating extends Request {
     }
 
 }
-?>
+

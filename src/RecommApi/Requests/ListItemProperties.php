@@ -58,4 +58,4 @@ class ListItemProperties extends Request {
     }
 
 }
-?>
+

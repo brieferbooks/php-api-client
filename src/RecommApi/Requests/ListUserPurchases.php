@@ -64,4 +64,4 @@ class ListUserPurchases extends Request {
     }
 
 }
-?>
+

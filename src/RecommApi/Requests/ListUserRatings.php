@@ -64,4 +64,4 @@ class ListUserRatings extends Request {
     }
 
 }
-?>
+

@@ -65,4 +65,4 @@ class DeleteGroup extends Request {
     }
 
 }
-?>
+

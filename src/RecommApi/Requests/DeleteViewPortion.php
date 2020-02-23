@@ -96,4 +96,4 @@ class DeleteViewPortion extends Request {
     }
 
 }
-?>
+

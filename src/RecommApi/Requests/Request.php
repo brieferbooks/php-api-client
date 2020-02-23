@@ -52,7 +52,7 @@ abstract class Request {
      * @return array Values of body parameters (name of parameter => value of the parameter)
      */
     abstract public function getBodyParameters();
-    
+
     /**
      * @var int Timeout of the request in milliseconds
      */
@@ -90,7 +90,7 @@ abstract class Request {
     }
     /**
      * Sets if HTTPS must be chosen over HTTP for this request
-     * @param bool true if HTTPS must be chosen 
+     * @param bool true if HTTPS must be chosen
      */
     public function setEnsureHttps($ensure_https)
     {
@@ -98,4 +98,3 @@ abstract class Request {
     }
 }
 
-?>

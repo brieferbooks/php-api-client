@@ -12,4 +12,3 @@ namespace Recombee\RecommApi\Exceptions;
 class ApiException extends \Exception {
 }
 
-?>

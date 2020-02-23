@@ -64,4 +64,4 @@ class GetUserPropertyInfo extends Request {
     }
 
 }
-?>
+

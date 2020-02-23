@@ -58,4 +58,4 @@ class SetUserValues extends SetValues {
         return "/{databaseId}/users/{$this->user_id}";
     }
 }
-?>
+

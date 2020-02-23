@@ -15,7 +15,7 @@ class UnknownOptionalParameterException extends \InvalidArgumentException {
 
 	/**
 	 * @var string $parameter Given invalid name
-	 */ 
+	 */
     public $parameter;
 
     public function __construct($par, Exception $previous = null) {
@@ -24,4 +24,3 @@ class UnknownOptionalParameterException extends \InvalidArgumentException {
     }
 }
 
-?>

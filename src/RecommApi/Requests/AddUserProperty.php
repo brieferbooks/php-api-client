@@ -43,7 +43,7 @@ class AddUserProperty extends Request {
     public function __construct($property_name, $type) {
         $this->property_name = $property_name;
         $this->type = $type;
-        $this->timeout = 10000;
+        $this->timeout = self::TIMEOUT;
         $this->ensure_https = false;
     }
 

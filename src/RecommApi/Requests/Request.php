@@ -12,6 +12,8 @@ namespace Recombee\RecommApi\Requests;
  */
 abstract class Request {
 
+    const TIMEOUT = 3000;
+
     /**
      @ignore
     */

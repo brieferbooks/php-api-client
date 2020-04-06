@@ -54,7 +54,7 @@ class MergeUsers extends Request {
             if (!in_array($key, $existing_optional))
                  throw new UnknownOptionalParameterException($key);
          }
-        $this->timeout = 10000;
+        $this->timeout = self::TIMEOUT;
         $this->ensure_https = false;
     }
 

@@ -28,6 +28,8 @@ class Client{
      */
     const BASE_URI = 'rapi.recombee.com';
 
+    const TIMEOUT = 1000;
+
     /**
      * @ignore
      */

@@ -43,7 +43,7 @@ class RemoveFromSeries extends Request {
         $this->item_type = $item_type;
         $this->item_id = $item_id;
         $this->time = $time;
-        $this->timeout = 10000;
+        $this->timeout = self::TIMEOUT;
         $this->ensure_https = false;
     }
 

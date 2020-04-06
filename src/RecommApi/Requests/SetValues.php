@@ -51,7 +51,7 @@ abstract class SetValues extends Request {
      */
     public function __construct($values, $optional = array()) {
         $this->values = $values;
-        $this->timeout = 10000;
+        $this->timeout = self::TIMEOUT;
         $this->ensure_https = false;
 
         $this->cascade_create = isset($optional['cascadeCreate']) ? $optional['cascadeCreate'] : null;

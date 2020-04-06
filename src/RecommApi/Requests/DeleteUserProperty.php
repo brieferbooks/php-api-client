@@ -25,7 +25,7 @@ class DeleteUserProperty extends Request {
      */
     public function __construct($property_name) {
         $this->property_name = $property_name;
-        $this->timeout = 10000;
+        $this->timeout = self::TIMEOUT;
         $this->ensure_https = false;
     }
 

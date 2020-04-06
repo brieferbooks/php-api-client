@@ -19,7 +19,7 @@ class ListItemProperties extends Request {
      * Construct the request
      */
     public function __construct() {
-        $this->timeout = 10000;
+        $this->timeout = self::TIMEOUT;
         $this->ensure_https = false;
     }
 

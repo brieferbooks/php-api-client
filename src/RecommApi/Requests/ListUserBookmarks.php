@@ -25,7 +25,7 @@ class ListUserBookmarks extends Request {
      */
     public function __construct($user_id) {
         $this->user_id = $user_id;
-        $this->timeout = 10000;
+        $this->timeout = self::TIMEOUT;
         $this->ensure_https = false;
     }
 
